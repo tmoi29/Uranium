@@ -17,6 +17,9 @@ void draw(){
         balls[i] = new Ball(); 
      }
    for (int i = 0; i < balls.length; i ++){
+      if (reactionStarted == true) {
+          balls[i].state = 1; 
+      }
       if (balls[i].state == 0){
          balls[i].move(); 
       }
@@ -31,6 +34,6 @@ void draw(){
       }
    }
 }
-void mouseClicked(){
-    
+void mouseClicked() {
+   reactionStarted = true;
 }
