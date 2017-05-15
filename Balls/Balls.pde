@@ -35,7 +35,7 @@ class Ball {
   
   void change(){
     if (get((int)x, (int)y) != color(0)){
-      state ++; 
+      state = 1; 
     } 
   }
   
@@ -44,7 +44,7 @@ class Ball {
     fill(c);
      dx = 0;
      dy = 0;
-     state ++;
+     state = 2;
   }
   
   
@@ -62,7 +62,7 @@ class Ball {
      fill(c);
      rad ++;
      if (rad > 21){
-       state ++; 
+       state = 3; 
      }
   }
   
