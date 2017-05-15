@@ -23,7 +23,7 @@ void draw(){
       if (balls[i].state == 0){
          balls[i].move(); 
       }
-      else if (balls[i].state == 1){
+      else if (balls[i].state == 1 && get((int)(balls[i].x+balls[i].dx),(int)(balls[i].y+balls[i].dy)) != 0){
          balls[i].stop();
       }
       else if (balls[i].state == 2){
