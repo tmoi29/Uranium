@@ -20,7 +20,7 @@ void draw(){
       if (balls[i].state == 0){
          balls[i].move(); 
       }
-      if (reactionStarted){
+      if (reactionStarted && balls[i].state == 0){
          balls[i].change(); 
       }
       else if (balls[i].state == 1 && reactionStarted){
@@ -29,7 +29,7 @@ void draw(){
       else if (balls[i].state == 2){
           balls[i].grow();
       }
-      else{
+      else if (balls[i].state == 3){
          balls[i].shrink();
       }
    }

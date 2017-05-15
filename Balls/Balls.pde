@@ -34,6 +34,8 @@ class Ball {
   }
   
   void change(){
+    ellipse(x, y, rad, rad);
+     fill(c);
     if (get((int)x, (int)y) != color(0)){
       state = 1; 
     } 
@@ -60,14 +62,19 @@ class Ball {
   void grow(){
      ellipse(x, y, rad, rad);
      fill(c);
-     rad ++;
+     rad += 1;
      if (rad > 21){
        state = 3; 
      }
   }
   
   void shrink(){
-     rad --;
+    ellipse(x, y, rad, rad);
+     fill(c);
+     rad -= 1;
+     if (rad < 0){
+      rad = 0; 
+     }
   }
   
  
