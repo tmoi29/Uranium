@@ -25,16 +25,28 @@ class Ball {
   }
 
   void move() {
+    ellipse(x,y,rad,rad);
+    fill(c);
     x = x + dx;
     y = y + dy;
     bounce();
+    
   }
   
-  void stop(){
+  void change(){
+    if (get((int)x, (int)y) != color(0)){
+      state ++; 
+    } 
+  }
+  
+  void halt(){
+    ellipse(x,y,rad,rad);
+    fill(c);
      dx = 0;
      dy = 0;
      state ++;
   }
+  
   
   void bounce() {
     if (x > width || x < 0) {
@@ -46,6 +58,8 @@ class Ball {
   }
   
   void grow(){
+     ellipse(x, y, rad, rad);
+     fill(c);
      rad ++;
      if (rad > 21){
        state ++; 
